@@ -216,9 +216,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Server is running! Use POST /calculate-distance to get distances.");
-});
+app.get("/",(req,res)=>{
+    res.json("Hello");
+})
+
+
 
 // API to calculate real-world distance
 app.post("/calculate-distance", async (req, res) => {
